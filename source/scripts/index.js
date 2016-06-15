@@ -1,10 +1,23 @@
 var cpjax = require('cpjax'),
-    crel = require('crel');
+    crel = require('crel'),
+    coolKid = 'MauriceButler';
 
 var membersUrl = 'https://api.github.com/orgs/australiasleadingjavascriptdeveloper/public_members';
 
 function renderMembers(members){
     var membersElement = document.querySelector('.members');
+
+    members.sort(function(a, b){
+        if(a.login === coolKid){
+            return -1;
+        }
+
+        if(b.login === coolKid){
+            return 1;
+        }
+
+        return 0;
+    });
 
     crel(membersElement,
         crel('p', 'Made by this developer'),
