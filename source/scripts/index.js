@@ -1,6 +1,6 @@
 var cpjax = require('cpjax'),
     crel = require('crel'),
-    coolKid = 'MauriceButler';
+    australiasLeadingJavascriptDeveloper = window.location.hash.slice(1).toLowerCase() || 'mauricebutler';
 
 var membersUrl = 'https://api.github.com/orgs/australiasleadingjavascriptdeveloper/public_members';
 
@@ -8,11 +8,11 @@ function renderMembers(members){
     var membersElement = document.querySelector('.members');
 
     members.sort(function(a, b){
-        if(a.login === coolKid){
+        if(a.login.toLowerCase() === australiasLeadingJavascriptDeveloper){
             return -1;
         }
 
-        if(b.login === coolKid){
+        if(b.login.toLowerCase() === australiasLeadingJavascriptDeveloper){
             return 1;
         }
 
