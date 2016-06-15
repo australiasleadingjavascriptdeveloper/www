@@ -1,8 +1,18 @@
 .member{
     display: inline-block;
     margin: 10px;
+    order: 2;
+}
+
+.member.leading{
+    font-size: 1.5em;
+    order: 1;
 }
 
 .member img{
     height: 100px;
+}
+
+.member.leading img{
+    height: 200px;
 }
