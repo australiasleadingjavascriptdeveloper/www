@@ -20,7 +20,8 @@
   "homepage": "https://github.com/australiasleadingjavascriptdeveloper/www#readme",
   "dependencies": {
     "cpjax": "^1.1.2",
-    "crel": "^3.0.0"
+    "crel": "^3.0.0",
+    "shuffle-array": "^1.0.0"
   },
   "devDependencies": {
     "watchify": "^3.7.0"
