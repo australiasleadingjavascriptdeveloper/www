@@ -16,3 +16,8 @@
 .member.leading img{
     height: 200px;
 }
+
+.trail {
+    position: absolute;
+    height: 50px; width: 50px;
+}
