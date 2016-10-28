@@ -1,6 +1,7 @@
 var cpjax = require('cpjax'),
     crel = require('crel'),
     shuffle = require('shuffle-array'),
+    mousetrail = require('./mousetrail'),
     australiasLeadingJavascriptDeveloperName = window.location.hash.slice(1).toLowerCase();
 
 var membersUrl = 'https://api.github.com/orgs/australiasleadingjavascriptdeveloper/public_members';
@@ -33,6 +34,7 @@ window.addEventListener('load', function(){
                 return; // ¯\_(ツ)_/¯
             }
 
+            mousetrail.attach(members);
             renderMembers(members);
         }
     );
